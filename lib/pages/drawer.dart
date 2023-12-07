@@ -8,7 +8,7 @@ import 'package:laptop_managment_luminar/pages/settings.dart';
 
 import '../utilz/colors.dart';
 import 'about.dart';
-import 'login.dart';
+import 'login/login.dart';
 
 
 class DrawerEx extends StatefulWidget {
@@ -33,8 +33,9 @@ class _DrawerExState extends State<DrawerEx> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurpleAccent,
-        elevation: 0,
+        title: Text('Luminar Technolab',style: TextStyle(color: Colors.white),),
+        backgroundColor: Colors.black45,
+        elevation: 10,
       ),
 
       drawer: Drawer(
@@ -45,12 +46,7 @@ class _DrawerExState extends State<DrawerEx> {
             UserAccountsDrawerHeader(
               decoration: const BoxDecoration(
                 color: klblueColor,
-                image: DecorationImage(
-                  fit: BoxFit.fill,
 
-                  colorFilter: ColorFilter.linearToSrgbGamma(),
-                  image: AssetImage("assets/images/image1.jpeg"),
-                ),
               ),
               accountName: const Text(
                 "My Name",

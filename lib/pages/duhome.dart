@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:laptop_managment_luminar/time%20slot.dart';
 
+
 void main() {
   runApp(MyApp());
 }
@@ -33,12 +34,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LaptopsPage(),
+      home: HomePage(),
     );
   }
 }
 
-class LaptopsPage extends StatelessWidget {
+class HomePage extends StatelessWidget {
   List<Laptop> laptops = [
     Laptop(name: 'Laptop A', specs: 'Specs A'),
     Laptop(name: 'Laptop B', specs: 'Specs B', isAvailable: false),
@@ -54,9 +55,7 @@ class LaptopsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Laptops'),
-      ),
+      backgroundColor: Colors.white10,
       body: ListView.builder(
         itemCount: laptops.length,
         itemBuilder: (context, index) {
@@ -86,20 +85,23 @@ class LaptopsPage extends StatelessWidget {
                   ],
                 ),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(primary: Colors.grey
+                      .shade800),
                   onPressed: () {
                     // Handle laptop selection
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => TimeSlotSelectionPage(),
+                        builder: (context) => TimeSlotSelectionPage1(selectedLaptop: laptops[index]),
                       ),
                     );
                   },
-                  child: Text(laptops[index].isSelected ? 'Deselect' : 'Select'),
+                  child: Text(laptops[index].isSelected
+                      ? 'Deselect' : 'Select',),
                 ),
                 Row(
                   children: [
-                    Text('Rating:'),
+                    Text('Rating:',style: TextStyle(color: Colors.grey.shade800),),
                     SizedBox(width: 10),
                     IconButton(
                       icon: Icon(Icons.star),

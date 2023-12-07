@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'drawer.dart';
+import 'package:laptop_managment_luminar/pages/drawer.dart';
 
-class MyLogin extends StatefulWidget {
-  const MyLogin({Key? key}) : super(key: key);
+class AdminLogin extends StatefulWidget {
+  const AdminLogin({super.key});
 
   @override
-  _MyLoginState createState() => _MyLoginState();
+  State<AdminLogin> createState() => _AdminLoginState();
 }
 
-class _MyLoginState extends State<MyLogin> {
-
+class _AdminLoginState extends State<AdminLogin> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -131,6 +130,7 @@ class _MyLoginState extends State<MyLogin> {
           ],
         ),
       ),
+
     );
   }
 }

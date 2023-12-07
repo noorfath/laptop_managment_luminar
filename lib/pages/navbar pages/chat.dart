@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'chatscreen.dart';
+import 'package:laptop_managment_luminar/pages/navbar%20pages/chatscreen.dart';
 
 
-// void main() {
-//   runApp(MaterialApp(home: Screen4()));
-// }
+
 
 class Chat extends StatefulWidget {
   const Chat({super.key});
@@ -19,8 +17,7 @@ class _ChatState extends State<Chat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-
+backgroundColor: Colors.black54,
       body: Column(
         children: <Widget>[
           Padding(
@@ -90,8 +87,8 @@ class ChatItem extends StatelessWidget {
       leading: CircleAvatar(
         backgroundImage: AssetImage('assets/icons/flutterimage.png'),
       ),
-      title: Text(name),
-      subtitle: Text(message),
+      title: Text(name,style: TextStyle(color: Colors.white),),
+      subtitle: Text(message,style: TextStyle(color: Colors.white),),
       trailing: Column(
         children: <Widget>[
           Text(time),

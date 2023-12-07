@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'login.dart';
+import '../login/login.dart';
 
 
 void main(){
@@ -17,7 +17,7 @@ class _Profil_pageState extends State<Profile_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+backgroundColor: Colors.black54,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -34,7 +34,7 @@ class _Profil_pageState extends State<Profile_page> {
             Text(
               'John Doe',
               style: TextStyle(
-                color: Colors.black,
+                color: Colors.white70,
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
@@ -44,19 +44,19 @@ class _Profil_pageState extends State<Profile_page> {
               'john.doe@example.com',
               style: TextStyle(
                 fontSize: 16,
-                color: Colors.grey,
+                color: Colors.white70,
               ),
             ),
             SizedBox(height: 24),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.deepPurpleAccent
+                  backgroundColor: Colors.grey
               ),
               onPressed: () {
 
                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyLogin()));
               },
-              child: Text('Sign Out'),
+              child: Text('Sign Out',style: TextStyle(color: Colors.redAccent),),
             ),
           ],
         ),
